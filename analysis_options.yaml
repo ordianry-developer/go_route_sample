@@ -1,0 +1,28 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude: [build/**,lib/**.freezed.dart] #analyzing 제외
+  errors:
+    todo: ignore #todo guide 사용안함
+linter:
+  rules:
+    prefer_single_quotes: true  # 홑따옴표로 string 표현
+    prefer_const_constructors : false # const 워닝 표시하지 않음
+    prefer_const_literals_to_create_immutables: false # const 워닝 표시하지 않음
+    lines_longer_than_80_chars: false #한줄로 길게 표시
+    prefer_relative_imports: true #상대경로 import 사용
+    use_key_in_widget_constructors: false #key default로 사용안함
+    sort_child_properties_last: false #child property 위치 자유
+    constant_identifier_names: false #constant 변수 lowerCamelCase 사용
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
